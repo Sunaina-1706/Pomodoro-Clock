@@ -1,0 +1,99 @@
+:root {
+  --primary: #63f1ea;
+  --bg: #0f172a;
+  --card-bg: rgba(255, 255, 255, 0.05);
+  --text: #f8fafc;
+  --text-dim: #94a3b8;
+}body {
+  background-color: var(--bg);
+  background-image: radial-gradient(circle at top right, #24b7b5, var(--bg));
+  color: var(--text);
+  font-family: 'Inter', system-ui, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}#container {
+  background: var(--card-bg);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 5rem 2rem;
+  border-radius: 2rem;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+}.timer-display {
+  margin-bottom: 2rem;
+}#time-text {
+  font-size: 5rem;
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -2px;
+  color: var(--primary);
+  text-shadow: 0 0 30px rgb(0 249 255 / 42%);
+}#manage {
+  font-size: 3.2rem;
+ color: #76eee0;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 2rem;
+}#controls-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}h3 {
+  font-size: 1.8rem;
+ color: #76eee0;
+  margin-bottom: 0.5rem;
+}#time, #break-time {
+  display: block;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}.plus, .minus {
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  color: white;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 1.2rem;
+}.plus:hover, .minus:hover {
+  background: var(--primary);
+  transform: translateY(-2px);
+}.actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}#start, #pause, #reset {
+  padding: 0.8rem 1.8rem;
+  border-radius: 12px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}#start {
+  background: var(--primary);
+  color: white;
+  flex: 2;
+}#start:hover {
+  box-shadow: 0 0 20px rgba(99, 102, 241, 0.4);
+  transform: scale(1.05);
+}#reset {
+  background: transparent;
+    color: #1db2af;
+    border: 1px solid rgb(25 239 220 / 77%);
+    flex: 1;
+}#reset:hover {
+  background: rgba(255, 255, 255, 0.05);
+  color: white;
+}#pause {
+  background: #d43e7d;
+  color: white;
+  flex: 2;
+}
